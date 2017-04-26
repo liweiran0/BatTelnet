@@ -1,0 +1,1 @@
+BatTelnet_2015.exe cfg_file.cfg addtask task_name task_owner cores direction callbackfile
