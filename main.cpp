@@ -88,6 +88,9 @@ void main(int argv, char* argc[])
   client.Connect(remote_ip.c_str(), stoi(port));
   client.SendMsg(send_cmd);
   client.Close();
-  system("pause");
+  if (cmd != "addtask")
+  {
+    system("pause");
+  }
   return;
 }
