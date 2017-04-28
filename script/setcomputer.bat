@@ -1,0 +1,1 @@
+BatTelnet.exe cfg_file.cfg setcomputer [ip] [cores]

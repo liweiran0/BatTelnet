@@ -40,9 +40,9 @@ int ClientNet::SendMsg(string msg)
 {
   int rlt = 0;
   int iErrMsg;
-  msg = "{" + msg + "}";
+  msg = "{" + msg + "}" + "\0";
   iErrMsg = send(m_sock, msg.c_str(), msg.length(), 0);
-  //cout << "send msg :" << msg << endl;
+  cout << "send msg :" << msg << endl;
   if (iErrMsg < 0)
   {
     printf("send msg failed with error : %d\n", iErrMsg);
@@ -66,7 +66,8 @@ void ClientNet::Close()
   }
   else
   {
-    cout << buf << endl;
+    cout << endl << "received data:" << endl;
+    cout << tmp << endl;
   }
   closesocket(m_sock);
   WSACleanup();
