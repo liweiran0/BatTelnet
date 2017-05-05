@@ -55,10 +55,12 @@ int ClientNet::SendMsg(string msg)
 void ClientNet::Close()
 {
   char buf[4096];
-  if (recv(m_sock, buf, 4000, 0) <= 0)
+  int size;
+  if ((size = recv(m_sock, buf, 4000, 0)) <= 0)
   {
-    cout << "¹Ø±ÕÁ¬½Ó" << endl;
+    cout << "close connection!" << endl;
   }
+  buf[size] = '\0';
   string tmp(buf);
   if (tmp.find("OK") == 0)
   {
