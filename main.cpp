@@ -80,11 +80,12 @@ void main(int argv, char* argc[])
     string task_name = argc[3];
     string owner = argc[4];
     string type = argc[5];
-    string cores = argc[6];
-    string workDir = argc[7];
-    string reletiveDir = argc[8];
-    string callback = argc[9];
-    send_cmd = "cmd=\"addtask\":taskname=\"" + task_name + "\":tasktype=\"" + type + "\":owner=\"" + owner + "\":cores=\"" + cores + "\":workdir=\"" + workDir + "\":reletivedir=\"" + reletiveDir + "\":callback=\"" + callback + "\"";
+    string logName = argc[6];
+    string cores = argc[7];
+    string workDir = argc[8];
+    string reletiveDir = argc[9];
+    string callback = argc[10];
+    send_cmd = "cmd=\"addtask\":taskname=\"" + task_name + "\":tasktype=\"" + type + "\":owner=\"" + owner + "\":logname=\"" + logName + "\":cores=\"" + cores + "\":workdir=\"" + workDir + "\":reletivedir=\"" + reletiveDir + "\":callback=\"" + callback + "\"";
   }
   ClientNet client;
   client.Connect(remote_ip.c_str(), stoi(port));
