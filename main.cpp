@@ -66,7 +66,7 @@ void main(int argv, char* argc[])
   {
     string ip = argc[3];
     string cores = argc[4];
-    send_cmd = "cmd=\"removecomputer\":ip=\"" + ip + "\":cores=\"" + cores + "\"";
+    send_cmd = "cmd=\"setcomputer\":ip=\"" + ip + "\":cores=\"" + cores + "\"";
   }
   else if (cmd == "lazysetcomputer")
   {
